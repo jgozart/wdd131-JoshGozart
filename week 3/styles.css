@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ccc; 
+  color: #333;
+}
+
+header {
+  background-color: #4a90e2; 
+  color: white;
+  text-align: center;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 0.5rem;
+}
+
+#menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0.3rem 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 0.5rem; 
+  padding: 0.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1/1; 
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  display: block;
+}
+
+footer {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (min-width: 900px) {
+  #menu-button {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex; 
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+.nav-links.open {
+  display: block;
+}
