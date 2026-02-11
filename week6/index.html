@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade Converter</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>Grade to GPA Converter</h1>
+
+    <label for="gradeInput">Enter a letter grade (A–F):</label>
+    <input type="text" id="gradeInput" maxlength="1" aria-describedby="gradeHelp">
+    <button onclick="handleConvert()">Convert</button>
+  <label for="gradeInput">Enter a letter grade (A–F)</label>
+
+        <p id="result" role="status" aria-live="polite"></p>
+
+    <script>
+        function convert(grade) {
+            let points;
+
+            switch (grade) {
+                case 'A':
+                    points = 4;
+                    break;
+                case 'B':
+                    points = 3;
+                    break;
+                case 'C':
+                    points = 2;
+                    break;
+                case 'D':
+                    points = 1;
+                    break;
+                case 'F':
+                    points = 0;
+                    break;
+                default:
+                    alert('Not a valid grade');
+                    return null;
+            }
+            return points;
+        }
+
+        function handleConvert() {
+            const grade = document.getElementById("gradeInput").value.toUpperCase();
+            const points = convert(grade);
+
+            if (points !== null) {
+                document.getElementById("result").textContent =
+                    `GPA points for grade ${grade}: ${points}`;
+            }
+        }
+    </script>
+
+</body>
+</html>
