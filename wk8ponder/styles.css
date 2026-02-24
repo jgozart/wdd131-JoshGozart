@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    color: #333;
+}
+
+#courseName,
+#courseCode {
+    text-align: center;
+}
+
+#courseName {
+    font-size: 2.3rem;
+    margin-bottom: 5px;
+}
+
+#courseCode {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+label,
+input,
+#enrollStudent {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+input {
+    padding: 10px;
+    width: 140px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+#enrollStudent {
+    padding: 10px 18px;
+    background: #2563eb;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.15s ease;
+    font-weight: 500;
+}
+
+#enrollStudent:hover {
+    background: #1e4fd1;
+}
+
+#enrollStudent:active {
+    transform: scale(0.95);
+}
+
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+}
+
+thead {
+    background: #2563eb;
+    color: white;
+}
+
+th {
+    padding: 14px;
+    text-align: left;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+}
+
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: #eef2ff;
+    cursor: pointer;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+@media(max-width:600px) {
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #enrollStudent {
+        width: 100%;
+    }
+}
