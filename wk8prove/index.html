@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="card.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="card">
+    <img id="playerImage" src="nickE.jpg" alt="Player Image">
+
+    <h2 id="playerName"></h2>
+
+    <p class="team-line">
+        Team: <span id="playerTeam"></span>
+        <img id="teamImage" src="smallhawkslogo.png" alt="Team Logo">
+    </p>
+
+    <p>Position: <span id="playerPosition"></span></p>
+    <p>Whiff: <span id="playerWhiff"></span></p>
+    <p>Rep: <span id="playerRep"></span></p>
+
+    <button onclick="player.missedTackle()">Whiff</button>
+    <button onclick="player.tackle()">Tackle</button>
+
+    <p id="statusMessage"></p>
+</div>
+
+<script src="card.js"></script>
+</body>
+</html>
