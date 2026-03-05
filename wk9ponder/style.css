@@ -1,23 +1,42 @@
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-font-size: 20px;
-max-width: 1280px;
-margin: auto;
-padding: 1em;
+  font-size: 20px;
+  max-width: 1280px;
+  margin: auto;
+  padding: 1em;
 }
 
 img {
-max-width: 100%;
+  max-width: 100%;
 }
 
 .main-nav {
-list-style-type: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
 }
 
-hr{
-margin-top: 50px;
+.media-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
-              
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery .media-card {
+  flex: 1 1 300px;
+  flex-direction: column;
+}
+
+hr {
+  margin-top: 50px;
+}       
