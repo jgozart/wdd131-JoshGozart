@@ -1,0 +1,115 @@
+body{
+margin:0;
+font-family: Arial, sans-serif;
+background:#fafafa;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:white;
+border-bottom:1px solid #ddd;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-area img{
+width:40px;
+}
+
+.logo-area h1{
+font-family:'Amatic SC', cursive;
+font-size:40px;
+margin:0;
+}
+
+.search{
+display:flex;
+align-items:center;
+}
+
+.search input{
+padding:8px;
+border:1px solid #ccc;
+border-radius:4px 0 0 4px;
+}
+
+.search button{
+border:1px solid #ccc;
+background:white;
+padding:8px;
+border-radius:0 4px 4px 0;
+cursor:pointer;
+}
+
+.search img{
+width:18px;
+}
+
+.recipe{
+display:flex;
+gap:20px;
+padding:20px;
+max-width:800px;
+margin:auto;
+}
+
+.recipe img{
+width:250px;
+border-radius:6px;
+}
+
+.recipe-info{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.recipe-info h2{
+font-family:'Amatic SC', cursive;
+font-size:32px;
+margin:0;
+}
+
+footer{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+padding:20px;
+background:#eee;
+margin-top:40px;
+}
+
+.social{
+display:flex;
+gap:15px;
+}
+
+.social img{
+width:24px;
+}
+
+@media (max-width:600px){
+
+.recipe{
+flex-direction:column;
+align-items:center;
+}
+
+.description{
+display:none;
+}
+
+.header{
+flex-direction:column;
+gap:10px;
+}
+
+}
