@@ -1,10 +1,9 @@
-
 const hikes = [
   {
     name: "Bechler Falls",
     stub: "bechler_falls",
     imgSrc:
-      "https://wdd131.netlify.app/examples/hikes/images/bechler-falls.jpg",
+      "becklerfalls.jpg",
     imgAlt: "Image of Bechler Falls",
     distance: "3 miles",
     tags: ["Caves", "Yellowstone", "Waterfall"],
@@ -18,7 +17,7 @@ const hikes = [
   {
     name: "Teton Canyon",
     stub: "teton_canyon",
-    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/teton-canyon.jpg",
+    imgSrc: "tetoncanyon.jpg",
     imgAlt: "Image of Teton Canyon",
     distance: "3 miles",
     tags: ["Canyon", "Tetons"],
@@ -32,7 +31,7 @@ const hikes = [
     name: "Denanda Falls",
     stub: "denanda_falls",
     imgSrc:
-      "https://wdd131.netlify.app/examples/hikes/images/denanda-falls.jpg",
+      "dunadafalls.webp",
     imgAlt: "Image of Denanda Falls",
     distance: "7 miles",
     tags: ["Caves", "Yellowstone", "Waterfall"],
@@ -45,8 +44,8 @@ const hikes = [
   {
     name: "Coffee Pot Rapids",
     stub: "coffee_pot",
-    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/coffee-pot.jpg",
-    imgAlt: "Image of Bechler Falls",
+    imgSrc: "coffeepotrapids.webp",
+    imgAlt: "Image of Coffee Pot Rapids",
     distance: "2.2 miles",
     tags: ["Rafting"],
     difficulty: 1,
@@ -59,7 +58,7 @@ const hikes = [
   {
     name: "Menan Butte",
     stub: "menan_butte",
-    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/menan-butte.jpg",
+    imgSrc: "menanbutte.jpg",
     imgAlt: "Image of Menan Butte",
     distance: "3.4 miles",
     tags: ["Volcanic", "View"],
@@ -70,5 +69,120 @@ const hikes = [
       "Take Highway 33 West out of Rexburg for about 8 miles. Turn left onto E Butte Road, the right onto Twin Butte road after about a mile. Follow that road for about 3 miles. You will see the parking lot/trailhead on the left.",
     trailhead: [43.78555, -111.98996]
   }
-];
-                
+]; 
+
+let hikeContainer = document.querySelector('#hike-container');
+let button = document.querySelector('#searchBtn');
+let input = document.querySelector('#search');
+
+button.addEventListener('click', search);
+input.addEventListener('keypress', handleEnter);
+
+function handleEnter(event) {
+  if (event.key === 'Enter') {
+    search();
+  }
+}
+
+function search() {
+
+  let hikeQuery = input.value.toLowerCase();
+
+  let filteredHikes = hikes.filter(function(hike){
+    return (
+      hike.name.toLowerCase().includes(hikeQuery) ||
+      hike.description.toLowerCase().includes(hikeQuery) ||
+      hike.tags.find(tag => tag.toLowerCase().includes(hikeQuery))
+    );
+  });
+
+  function compareHikes(a,b){
+
+    let distA = parseFloat(a.distance);
+    let distB = parseFloat(b.distance);
+
+    if (distA < distB) return -1;
+    if (distA > distB) return 1;
+    return 0;
+  }
+
+  let sortedHikes = filteredHikes.sort(compareHikes);
+
+  hikeContainer.innerHTML = '';
+
+  sortedHikes.forEach(function(hike){
+    renderHike(hike);
+  });
+
+}
+
+function tagTemplate(tags) {
+  return tags.map(tag =>
+    `<button aria-label="Hike tag ${tag}">${tag}</button>`
+  ).join(' ');
+}
+
+function difficultyTemplate(rating) {
+
+  let html = `
+  <span class="rating"
+  role="img"
+  aria-label="Difficulty rating ${rating} out of 5">
+  Difficulty: `;
+
+  for (let i = 1; i <= 5; i++) {
+
+    if (i <= rating) {
+      html += `<span aria-hidden="true">🥾</span>`;
+    } 
+    else {
+      html += `<span aria-hidden="true">▫️</span>`;
+    }
+
+  }
+
+  html += `</span>`;
+
+  return html;
+}
+
+function hikesTemplate(hike) {
+
+  return `
+  <div class="hike-card">
+
+    <img src="${hike.imgSrc}" alt="${hike.imgAlt}">
+
+    <div class="hike-content">
+
+      <h2>${hike.name}</h2>
+
+      <div class="hike-tags">
+        ${tagTemplate(hike.tags)}
+      </div>
+
+      <p>${hike.description}</p>
+
+      <p>${difficultyTemplate(hike.difficulty)}</p>
+
+      <p><strong>Distance:</strong> ${hike.distance}</p>
+
+    </div>
+
+  </div>
+  `;
+}
+
+function renderHike(hike) {
+  hikeContainer.innerHTML += hikesTemplate(hike);
+}
+
+function init() {
+
+  let randomNum = Math.floor(Math.random() * hikes.length);
+
+  renderHike(hikes[randomNum]);
+
+}
+
+init();
