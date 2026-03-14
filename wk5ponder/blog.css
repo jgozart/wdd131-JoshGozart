@@ -19,7 +19,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; 
   gap: 1.5rem;
   padding: 1.5rem;
 }
@@ -31,6 +31,12 @@ body {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .book-card img {
@@ -46,9 +52,12 @@ body {
   margin-top: 0;
 }
 
-.author {
-  font-style: italic;
-  color: #555;
+.book-info p {
+  margin: 0.5rem 0;
+}
+
+.book-info strong {
+  color: #2c3e50;
 }
 
 .site-footer {
@@ -60,7 +69,7 @@ body {
 
 @media (min-width: 600px) {
   .book-card {
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 200px 1fr; 
   }
 
   .book-card img {
