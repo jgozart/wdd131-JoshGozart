@@ -1,0 +1,80 @@
+:root {
+  --bg-main: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-main: #ffffff;
+  --text-muted: #b3b3b3;
+  --accent: #2a2a2a;
+
+  --primary: #69be28;
+
+  --font-main: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* THEMES */
+.last-season { --primary: #002244; }
+.draft { --primary: #d50a0a; }
+.upcoming { --primary: #69be28; }
+.about { --primary: #ff6a00; }
+
+/* NAV */
+.navbar {
+  
+}
+
+.nav-links a {
+  
+}
+
+/* HERO */
+.hero {
+  
+}
+
+/* CARDS */
+.card-container {
+ 
+}
+
+.card {
+  
+}
+
+.card:hover {
+  
+}
+
+/* DROPDOWN */
+.dropdown {
+  
+}
+
+.card:hover .dropdown {
+  opacity: 1;
+}
+
+/* TABLE */
+table {
+  
+}
+
+
+/* SEARCH */
+.search {
+  
+}
+
+input {
+  
+}
+
+/* FOOTER */
+footer {
+  
+}
