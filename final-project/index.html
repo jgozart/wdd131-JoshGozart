@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seahawks Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<div>Seahawks Hub</div>
+<div>
+<a href="index.html">Home</a>
+<a href="last-season.html">Last Season</a>
+<a href="draft.html">Draft</a>
+<a href="upcoming.html">Upcoming</a>
+<a href="about.html">About</a>
+</div>
+</nav>
+</header>
+
+<main>
+
+<section class="hero">
+<h1>Seahawks Fan Hub</h1>
+<p>All your team info in one place</p>
+<img src="images/logo.png" alt="Seahawks themed globe logo">
+</section>
+
+<section class="card-container">
+
+<div class="card" onclick="location.href='last-season.html'">
+<h3>Last Season</h3>
+<div class="dropdown">
+<p>Scores</p>
+<p>Stats</p>
+<p>Highlights</p>
+</div>
+</div>
+
+<div class="card" onclick="location.href='draft.html'">
+<h3>Draft</h3>
+<div class="dropdown">
+<p>Prospects</p>
+<p>Picks</p>
+<p>Profiles</p>
+</div>
+</div>
+
+<div class="card" onclick="location.href='upcoming.html'">
+<h3>Upcoming</h3>
+<div class="dropdown">
+<p>Schedule</p>
+<p>Matchups</p>
+<p>Signings</p>
+</div>
+</div>
+
+</section>
+
+<section class="search">
+<input id="searchInput" type="text" placeholder="Search players..." aria-label="Search players">
+</section>
+
+</main>
+
+<footer>© 2026 Seahawks Hub</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
