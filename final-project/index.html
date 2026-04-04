@@ -6,71 +6,94 @@
 <title>Seahawks Hub</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header>
-<nav>
-<div>Seahawks Hub</div>
+<nav aria-label="Main navigation">
+<div><strong>Seahawks Hub</strong></div>
+<img src="images/seahawks-throwback-logo.webp" alt="Seahawks Throwback Logo" aria-label="Seahawks throwback logo">
 <div>
 <a href="index.html">Home</a>
-<a href="last-season.html">Last Season</a>
-<a href="draft.html">Draft</a>
-<a href="upcoming.html">Upcoming</a>
-<a href="about.html">About</a>
-</div>
+<a href="last-season.html">Past Season</a>
+<a href="draft.html">2026 NFL Draft</a>
+<a href="upcoming.html">Upcoming Season</a>
+<a href="about.html">About Page</a>
 </nav>
 </header>
 
-<main>
+<section class="search">
+
+  <h2>Search Players</h2>
+
+  <input 
+    id="searchInput"
+    type="text"
+    placeholder="Search players..."
+    aria-label="Search players"
+  >
+
+  <button id="sortBtn">Sort A-Z</button>
+
+  <div id="playerList"></div>
+
+</section>
+
+
+<main class="container">
 
 <section class="hero">
 <h1>Seahawks Fan Hub</h1>
-<p>All your team info in one place</p>
-<img src="images/logo.png" alt="Seahawks themed globe logo">
+<p>Stats, Draft, and Season Coverage</p>
+<img src="images/seahawkswebsitelogo.png" alt="Seahawks themed globe logo" aria-label="Seahawks fan site logo">
 </section>
 
 <section class="card-container">
-
-<div class="card" onclick="location.href='last-season.html'">
-<h3>Last Season</h3>
-<div class="dropdown">
-<p>Scores</p>
-<p>Stats</p>
-<p>Highlights</p>
+<div class="card" onclick="location.href='last-season.html'" aria-label="Last Season - Super Bowl 60 Champs!">
+<h3>Last Season - Super Bowl 60 Champs!</h3>
+<div class="dropdown" aria-label="More from Last Season">
+<p>Oppenents</p>
+<p>Game Scores</p>
+<p>Pictures</p>
 </div>
 </div>
 
-<div class="card" onclick="location.href='draft.html'">
-<h3>Draft</h3>
-<div class="dropdown">
-<p>Prospects</p>
-<p>Picks</p>
-<p>Profiles</p>
+<div class="card" onclick="location.href='draft.html'" aria-label="2026 NFL Draft">
+<h3>2026 NFL Draft</h3>
+<div class="dropdown" aria-label="Upcoming 2026 NFL Draft">
+<p>Top Prospects</p>
+<p>Draft Picks</p>
+<p>2025 Recap</p>
 </div>
 </div>
 
-<div class="card" onclick="location.href='upcoming.html'">
-<h3>Upcoming</h3>
-<div class="dropdown">
-<p>Schedule</p>
+<div class="card" onclick="location.href='upcoming.html'" aria-label="Upcoming Season">
+<h3>Upcoming Season</h3>
+<div class="dropdown" aria-label="Upcoming Season Content">
+<p>Breakout Players</p>
 <p>Matchups</p>
-<p>Signings</p>
+<p>Pictures</p>
 </div>
 </div>
 
 </section>
 
-<section class="search">
-<input id="searchInput" type="text" placeholder="Search players..." aria-label="Search players">
+<img src="images/defense.webp" alt="Seahawks Defense" aria-label="Seahawks Defense">
+<img src="images/kickreturn.webp" alt="Kick Return" aria-label="Rashid Shaheed kick return against the 49ers">
+
+<section class="offseason" aria-label="Running Back Kenneth Walker III, Edge Rusher Boye Mafe, and Safety Coby Bryant.">
+<h2>Key Offseason Departures</h2>
+<p>RB Kenneth Walker III -- Kansas City Chiefs</p>
+<p>ED Boye Mafe -- Cincinnati Bengals</p>
+<p>S Coby Bryant -- Chicago Bears</p>
 </section>
 
 </main>
 
-<footer>© 2026 Seahawks Hub</footer>
+<footer>© 2026 Josh Gozart WDD 131</footer>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
