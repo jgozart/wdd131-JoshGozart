@@ -1,24 +1,22 @@
 :root {
-  --bg-main: #0c2c56;      /* blue background */
-  --bg-card: #123b73;      /* lighter blue cards */
+  --bg-main: #0c2c56;     
+  --bg-card: #123b73;      
 
-  --text-main: #c0c0c0;    /* silver text */
+  --text-main: #c0c0c0;    
   --text-muted: #a5acaf;
 
-  --accent: #5dd39e;       /* green accents/nav */
+  --accent: #5dd39e;       
   --border: #c0c0c0;
 
   --radius: 12px;
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg-main);
@@ -26,7 +24,6 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
 header {
   background: var(--accent);
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -47,7 +44,6 @@ nav a {
   font-weight: 600;
 }
 
-/* HERO */
 .hero {
   text-align: center;
   padding: 2rem;
@@ -57,14 +53,12 @@ nav a {
   font-size: 2.5rem;
 }
 
-/* GRID LAYOUT (UPGRADE) */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 1rem;
 }
 
-/* CARDS */
 .card-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -86,7 +80,6 @@ nav a {
   border-color: var(--accent);
 }
 
-/* DROPDOWN */
 .dropdown {
   position: absolute;
   top: 100%;
@@ -102,7 +95,6 @@ nav a {
   opacity: 1;
 }
 
-/* SEARCH */
 .search {
   text-align: center;
   margin: 2rem 0;
@@ -118,7 +110,6 @@ input {
   color: var(--text-main);
 }
 
-/* TABLE */
 .table {
   width: 100%;
   margin-top: 1rem;
@@ -134,7 +125,6 @@ td, th {
   border-bottom: 1px solid var(--border);
 }
 
-/* TABLE 2 */
 .tabletwo {
   width: 100%;
   margin-top: 1rem;
@@ -150,7 +140,6 @@ td, th {
   border-bottom: 1px solid var(--border);
 }
 
-/* IMAGE */
 img {
   width: 45%;
   border-radius: var(--radius);
@@ -158,7 +147,6 @@ img {
   margin-top: 1rem;
 }
 
-/* IMAGE 2 */
 .img {
   width: 45%;
   border-radius: var(--radius);
@@ -166,20 +154,17 @@ img {
   flex-wrap: row;
 }
 
-/* SECTION */
 .offseason {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 1rem;
   border-top: 1px solid var(--border);
 }
 
-/* DESKTOP */
 @media (min-width: 768px) {
   .card-container {
     grid-template-columns: repeat(3, 1fr);
